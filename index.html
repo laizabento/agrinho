@@ -8,49 +8,57 @@
 </head>
 <body>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Agro Forte, Futuro Sustentável</h1>
-            <p>O equilíbrio perfeito entre a alta produção e a preservação do meio ambiente.</p>
-            <a href="#simulador" class="btn-primary">Testar Simulador</a>
-        </div>
+    <header>
+        <h1>EcoAgro<span>Tech</span></h1>
+        <p>Equilíbrio entre produção e meio ambiente</p>
     </header>
 
-    <section class="pilares">
-        <h2>Pilares do Agro Sustentável</h2>
-        <div class="cards-container">
-            <div class="card">
-                <h3>Tecnologia no Campo</h3>
-                <p>Uso de drones e sensores para aplicar água e fertilizantes apenas onde é necessário, evitando desperdícios.</p>
-            </div>
-            <div class="card">
-                <h3>Rotação de Culturas</h3>
-                <p>Preserva os nutrientes do solo de forma natural, reduzindo a necessidade de defensivos químicos.</p>
-            </div>
-            <div class="card">
-                <h3>Energias Limpas</h3>
-                <p>Fazendas movidas a energia solar e biomassa, reduzindo a pegada de carbono da produção.</p>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="intro">
+            <h2>O Futuro do Agro é Sustentável</h2>
+            <p>Produzir alimentos para uma população crescente sem esgotar os recursos naturais é o maior desafio da nossa geração. A tecnologia e a consciência ambiental caminham juntas.</p>
+        </section>
 
-    <section id="simulador" class="simulador-section">
-        <h2>Simulador de Impacto Ambiental</h2>
-        <p>Ajuste o nível de tecnologia sustentável aplicada na fazenda e veja o resultado:</p>
-        
-        <div class="controle-simulador">
-            <label for="sustentabilidade-range">Nível de Práticas Sustentáveis:</label>
-            <input type="range" id="sustentabilidade-range" min="1" max="3" value="1">
-        </div>
+        <section class="praticas">
+            <div class="card">
+                <h3>⚡ Energia Limpa</h3>
+                <p>Uso de painéis solares e biomassa para mover as máquinas do campo.</p>
+            </div>
+            <div class="card">
+                <h3>💧 Irrigação Gota a Gota</h3>
+                <p>Tecnologia que evita o desperdício, levando água direto à raiz da planta.</p>
+            </div>
+            <div class="card">
+                <h3>🚜 Plantio Direto</h3>
+                <p>Protege o solo contra a erosão e mantém os nutrientes naturais.</p>
+            </div>
+        </section>
 
-        <div id="resultado-card" class="resultado-card estado-1">
-            <h3 id="resultado-titulo">Baixa Sustentabilidade</h3>
-            <p id="resultado-desc">Produção focada apenas no curto prazo. Alto risco de esgotamento do solo e poluição da água.</p>
-        </div>
-    </section>
+        <section class="simulador">
+            <h2>Simulador: Fazenda do Futuro</h2>
+            <p>Escolha as práticas para a sua fazenda e veja o nível de equilíbrio ambiental:</p>
+            
+            <div class="opcoes">
+                <label>
+                    <input type="checkbox" id="reflorestamento" onchange="calcularSustentabilidade()"> Preservar Áreas de APP (Matas Ciliares)
+                </label>
+                <label>
+                    <input type="checkbox" id="defensivos" onchange="calcularSustentabilidade()"> Uso de Biopesticidas / Controle Biológico
+                </label>
+                <label>
+                    <input type="checkbox" id="tecnologia" onchange="calcularSustentabilidade()"> Uso de Drones e IA para Monitoramento
+                </label>
+            </div>
+
+            <div class="resultado-box">
+                <p>Índice de Sustentabilidade: <strong id="score">0%</strong></p>
+                <p>Status: <span id="status">Fazenda Convencional</span></p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Concurso Agrinho - Desenvolvido com Orgulho por um(a) Estudante do 2º Ano</p>
+        <p>&copy; 2026 - Desenvolvido para o Concurso Agrinho</p>
     </footer>
 
     <script src="script.js"></script>
